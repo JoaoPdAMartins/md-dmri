@@ -1,4 +1,4 @@
-function xps = mdm_xps_from_bval_bvec(bval_fn, bvec_fn, b_delta, t_e)
+function xps = mdm_xps_from_bval_bvec_te(bval_fn, bvec_fn, b_delta, t_e)
 % function xps = mdm_xps_from_bval_bvec(bval_fn, bvec_fn, b_delta)
 %
 % Create an xps from the b-value and b-vec file resulting from a dcm2nii
