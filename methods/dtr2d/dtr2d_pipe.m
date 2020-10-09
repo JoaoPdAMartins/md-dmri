@@ -39,8 +39,8 @@ if (opt.do_data2fit)
 end
 
 if (opt.do_datafit2chisq)   
-    ind = opt.dtr2d.ind_start:s.xps.n;
-    chisq_fn = mio_datafit2chisq(@dtr2d_1d_fit2data, s, paths.mfs_fn, paths.chisq_fn, opt, ind);
+    opt.dtd.ind_start = opt.dtr2d.ind_start;
+    chisq_fn = mio_datafit2chisq(@dtr2d_1d_fit2data, s, paths.mfs_fn, paths.chisq_fn, opt);
 end
 
 if (opt.do_fit2param)

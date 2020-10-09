@@ -41,8 +41,11 @@ opt.(method) = msf_ensure_field(opt.(method), 'bin_sddeltamax',[1; .25; 1]);
 opt.(method) = msf_ensure_field(opt.(method), 'bin_r2max',opt.(method).r2max*[1; 1; 1]);
 opt.(method) = msf_ensure_field(opt.(method), 'bin_r2min',opt.(method).r2min*[1; 1; 1]);
 
-opt.(method) = msf_ensure_field(opt.(method), 'r2extrap', 0);
+% opt.(method) = msf_ensure_field(opt.(method), 'r2extrap', 0);
 
 % ODF options
 opt.(method) = msf_ensure_field(opt.(method), 'odf_nnodes', 1000); %250, 500, 1000, 3994, or 15970
-opt.(method) = msf_ensure_field(opt.(method), 'odf_watsonkappa', 0.05);
+opt.(method) = msf_ensure_field(opt.(method), 'odf_watsonkappa', 15);
+opt.(method) = msf_ensure_field(opt.(method), 'n_peaks', 4);
+opt.(method) = msf_ensure_field(opt.(method), 'peak_thresh', .1);
+opt.(method) = msf_ensure_field(opt.(method), 'angle_thresh', 5*pi / 180); % in radians
