@@ -30,6 +30,7 @@ odf_s.w = k*odf_d.w;
 odf_s.diso = (k*(odf_d.w.*odf_d.diso))./odf_s.w;
 odf_s.sddelta = (k*(odf_d.w.*odf_d.sddelta))./odf_s.w;
 odf_s.r2 = (k*(odf_d.w.*odf_d.r2))./odf_s.w;
+odf_s.t2 = (k*(odf_d.w.*odf_d.t2))./odf_s.w;
 odf_s.verts = repmat(odf_s.w,[1 3]).*[odf_s.x odf_s.y odf_s.z];
 odf_s.c = abs([odf_s.x odf_s.y odf_s.z]);
 
@@ -37,3 +38,4 @@ odf_s.w(~isfinite(odf_s.w)) = 0;
 odf_s.diso(~isfinite(odf_s.diso)) = 0;
 odf_s.sddelta(~isfinite(odf_s.sddelta)) = 0;
 odf_s.r2(~isfinite(odf_s.r2)) = 0;
+odf_s.t2(~isfinite(odf_s.t2)) = 0;
